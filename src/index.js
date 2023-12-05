@@ -109,6 +109,7 @@ class App extends React.Component {
                 <a
                   className="testing-talks-logo"
                   href="/"
+                  data-id="header-logo"
                 >
                 </a>
               </div>

@@ -14,6 +14,7 @@ function _toPrimitive(input, hint) { if (typeof input !== "object" || input === 
 class ScenarioWorld extends _cucumber.World {
   constructor(options) {
     super(options);
+    _defineProperty(this, "globalConfig", void 0);
     _defineProperty(this, "screen", void 0);
     _defineProperty(this, "newBrowser", async () => {
       const automationBrowsers = ['chromium', 'firefox', 'webkit'];
@@ -25,6 +26,7 @@ class ScenarioWorld extends _cucumber.World {
       });
       return browser;
     });
+    this.globalConfig = options.parameters;
   }
   async init(contextOptions) {
     var _this$screen, _this$screen2, _this$screen3;
